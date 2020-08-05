@@ -6,9 +6,9 @@ pipeline {
                 sh """
                 git branch -a
                 git checkout master
-                git branch release-branch0
-                git checkout release-branch0
-                git push origin release-branch0
+                git pull
+                git checkout example-solution
+                git branch -a
                 """
             }
         }
