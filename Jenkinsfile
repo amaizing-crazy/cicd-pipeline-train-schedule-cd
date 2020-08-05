@@ -9,7 +9,7 @@ pipeline {
                 git pull
                 git checkout -b release-branch3
                 git branch -a
-                git push remote-repo release-branch3
+                git push origin release-branch3
                 """
             }
         }
