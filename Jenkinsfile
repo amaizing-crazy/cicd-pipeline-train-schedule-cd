@@ -5,11 +5,8 @@ pipeline {
             steps {
                 sh """
                 git branch -a
-                git checkout master
-                git pull
-                git branch -a
-                git checkout branch5
-                git push
+                git checkout -b branch6
+                git push origin branch6
                 """
             }
         }
