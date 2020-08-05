@@ -9,7 +9,7 @@ pipeline {
                 git config --global credential.helper "!echo password=${PASSWORD}; echo"
                 git branch -a
                 git fetch
-                git checkout example-solution
+                git checkout origin/example-solution
                 git branch -d branch6
                 git checkout -b branch6
                 git push origin branch6
