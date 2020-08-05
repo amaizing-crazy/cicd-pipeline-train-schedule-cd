@@ -8,7 +8,8 @@ pipeline {
                 git checkout master
                 git pull
                 git branch -a
-                git push -u origin branch5
+                git checkout branch5
+                gut push
                 """
             }
         }
