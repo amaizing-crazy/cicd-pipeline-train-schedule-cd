@@ -8,7 +8,7 @@ pipeline {
                 git config --global credential.username ${USERNAME}
                 git config --global credential.helper "!echo password=${PASSWORD}; echo"
                 git branch -a
-                git fetch
+                git pull
                 git checkout example-solution
                 git branch -d branch6
                 git checkout -b branch6
