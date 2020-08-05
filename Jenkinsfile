@@ -4,6 +4,7 @@ pipeline {
         stage('create branch') {
             steps {
                 sh """
+                git branch -a
                 git checkout master
                 git branch release-branch0
                 git checkout release-branch0
