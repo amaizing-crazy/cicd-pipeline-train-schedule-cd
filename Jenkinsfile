@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('create branch') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'github_repo', usernameVariable: 'USERNAME', passwordVariable: 'USERPASS')]) {
+                withCredentials([usernamePassword(credentialsId: 'github_repo', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                 sh """
                 git config --global credential.username {USERNAME}
                 git config --global credential.helper "!echo password={PASSWORD}; echo"
