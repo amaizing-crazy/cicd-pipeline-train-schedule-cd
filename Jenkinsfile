@@ -10,7 +10,7 @@ pipeline {
                 git branch -a
                 git status
                 git remote show origin 
-                git checkout example-solution 
+                git checkout branch6 
                 git pull
                 git checkout -b release-branch8
                 git push origin release-branch8
