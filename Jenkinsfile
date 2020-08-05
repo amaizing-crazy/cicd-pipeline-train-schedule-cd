@@ -7,8 +7,9 @@ pipeline {
                 git branch -a
                 git checkout master
                 git pull
-                git checkout example-solution
+                git checkout release-branch3
                 git branch -a
+                git push remote-repo release-branch3
                 """
             }
         }
