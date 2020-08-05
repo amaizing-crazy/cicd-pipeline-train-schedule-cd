@@ -7,9 +7,9 @@ pipeline {
                 git branch -a
                 git checkout master
                 git pull
-                git checkout -b release-branch4
+                git checkout -b branch5
                 git branch -a
-                git push origin release-branch4
+                git push origin branch5
                 """
             }
         }
