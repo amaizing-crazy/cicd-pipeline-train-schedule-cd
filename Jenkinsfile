@@ -10,7 +10,7 @@ pipeline {
                 git branch -a
                 git remote update
                 git fetch
-                git checkout origin/example-solution
+                git checkout --track origin/example-solution
                 git branch -d branch6
                 git checkout -b branch6
                 git push origin branch6
