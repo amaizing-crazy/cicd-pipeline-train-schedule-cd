@@ -7,6 +7,7 @@ pipeline {
                 sh """
                 git config --global credential.username ${USERNAME}
                 git config --global credential.helper "!echo password=${PASSWORD}; echo"
+                git branch -a
                 git status
                 git remote show origin 
                 git checkout example-solution 
