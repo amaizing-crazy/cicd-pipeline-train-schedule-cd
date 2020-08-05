@@ -9,7 +9,7 @@ pipeline {
                 git pull
                 git branch -a
                 git checkout branch5
-                gut push
+                git push
                 """
             }
         }
