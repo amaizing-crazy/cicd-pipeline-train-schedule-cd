@@ -1,23 +1,16 @@
 pipeline {
     agent any
     stages {
+        stage('clean-workspace') {
+          steps {
+           sh "git clean -n"
+           }
+        }
         stage('create branch') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'github_repo', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-                sh """
-                git config --global credential.username ${USERNAME}
-                git config --global credential.helper "!echo password=${PASSWORD}; echo"
-                git pull
-                git branch -a
-                git status
-                git remote show origin 
-                git checkout release-branch8 
-                git pull
-                git checkout -b release-branch18
-                git push origin release-branch18
-                """
+                git branch: "release-branch8", credentialsId: github_repo, url: "https://github.com/linuxacademy/cicd-pipeline-train-schedule-cd.git"
                 }
-            }
+            }     
         }
     }
 }
