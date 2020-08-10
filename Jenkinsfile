@@ -8,7 +8,7 @@ pipeline {
         }
         stage('create branch') {
             steps {
-                git branch: "release-branch8", credentialsId: github_repo, url: "https://github.com/linuxacademy/cicd-pipeline-train-schedule-cd.git"
+                git branch: "release-branch8", url: "https://github.com/linuxacademy/cicd-pipeline-train-schedule-cd.git"
                 }
             }     
         }
