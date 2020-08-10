@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('clean-workspace') {
           steps {
-           sh "git clean -n"
+           sh "git clean -fdx"
            }
         }
         stage('create branch') {
